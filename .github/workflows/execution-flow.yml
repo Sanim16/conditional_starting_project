@@ -76,7 +76,7 @@ jobs:
       - name: Deploy
         run: echo "Deploying..."
   Jobfail:
-    needs: [deploy]
+    needs: [lint, deploy]
     runs-on: ubuntu-latest
     if: failure()
     steps:
